@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "walnutlink"
+version = "0.1.0"
+description = "Ask why a China A-share number moved. Answers cite the filing, not a terminal."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "WalnutLink AI"}]
+keywords = ["a-share", "china", "equity", "research", "mcp", "agent", "filings"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Financial and Insurance Industry",
+]
+# 零依赖是刻意的。pip install 之后立刻能跑，不用再装 requests。
+dependencies = []
+
+[project.urls]
+Homepage = "https://walnutlink.ai"
+Repository = "https://github.com/WalnutLink/walnutlink-py"
+
+[tool.setuptools.packages.find]
+include = ["walnutlink*"]
